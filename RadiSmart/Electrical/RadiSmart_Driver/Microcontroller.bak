@@ -1,0 +1,399 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:MRV_ICs
+LIBS:RadiSmart_Driver-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L PIC18F26K42 U7
+U 1 1 59F58EBF
+P 4650 4550
+F 0 "U7" H 5000 6300 60  0000 C CNN
+F 1 "PIC18F26K42" H 5500 4700 60  0000 C CNN
+F 2 "SMD_Packages:SOIC-28" H 4650 4550 60  0001 C CNN
+F 3 "" H 4650 4550 60  0000 C CNN
+	1    4650 4550
+	1    0    0    -1  
+$EndComp
+Text HLabel 6300 3650 2    60   Input ~ 0
+PWM3
+Text HLabel 4700 4150 0    60   Input ~ 0
+ADC1
+Text HLabel 4700 4250 0    60   Input ~ 0
+ADC2
+Text HLabel 6300 4250 2    60   Input ~ 0
+ADC3
+Text HLabel 6300 4150 2    60   Input ~ 0
+ADC4
+Text HLabel 6300 4050 2    60   Input ~ 0
+ADC5
+Text HLabel 6300 3950 2    60   Input ~ 0
+ADC6
+Text HLabel 6300 3550 2    60   Input ~ 0
+PWM2
+Text HLabel 6300 3450 2    60   Input ~ 0
+PWM1
+Text HLabel 6300 3350 2    60   Input ~ 0
+PWM0
+Text HLabel 4700 3050 0    60   Input ~ 0
+GPIO_0
+Text HLabel 4700 3150 0    60   Input ~ 0
+GPIO_1
+Text HLabel 4700 3250 0    60   Input ~ 0
+GPIO_2
+Text HLabel 4700 3350 0    60   Input ~ 0
+GPIO_3
+Text HLabel 4700 3450 0    60   Input ~ 0
+GPIO_4
+Text HLabel 4700 3550 0    60   Input ~ 0
+GPIO_5
+Text HLabel 7500 3750 2    60   Input ~ 0
+VDD
+$Comp
+L CONN_01X06 P1
+U 1 1 59F60282
+P 8350 2400
+F 0 "P1" H 8350 2750 50  0000 C CNN
+F 1 "Pikit header" H 8150 2850 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x06" H 8350 2400 50  0001 C CNN
+F 3 "" H 8350 2400 50  0000 C CNN
+	1    8350 2400
+	1    0    0    -1  
+$EndComp
+Text Label 4450 2950 0    60   ~ 0
+MCLR
+Text Label 6650 3750 0    60   ~ 0
+VDD
+$Comp
+L Crystal Y1
+U 1 1 59F60428
+P 3950 3900
+F 0 "Y1" H 3950 4050 50  0000 C CNN
+F 1 "Crystal" V 3950 3650 50  0000 C CNN
+F 2 "Crystals:Crystal_Watch" H 3950 3900 50  0001 C CNN
+F 3 "" H 3950 3900 50  0000 C CNN
+	1    3950 3900
+	0    1    1    0   
+$EndComp
+Text Label 7850 2150 0    60   ~ 0
+MCLR
+Text Label 7850 2250 0    60   ~ 0
+VDD
+Text Label 7850 2350 0    60   ~ 0
+VSS
+Text Label 7750 2450 0    60   ~ 0
+ICSPDAT
+Text Label 7750 2550 0    60   ~ 0
+ICSPCLK
+Text Label 6350 2950 0    60   ~ 0
+ICSPDAT
+Text Label 6350 3050 0    60   ~ 0
+ICSPCLK
+Text Label 6650 3850 0    60   ~ 0
+VSS
+Text HLabel 6900 3850 2    60   Input ~ 0
+VSS
+$Comp
+L R R27
+U 1 1 59F6071D
+P 4050 2950
+F 0 "R27" V 4130 2950 50  0000 C CNN
+F 1 "470R" V 3950 2950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 3980 2950 50  0001 C CNN
+F 3 "" H 4050 2950 50  0000 C CNN
+	1    4050 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L R R28
+U 1 1 59F607B9
+P 3700 2750
+F 0 "R28" H 3850 2750 50  0000 C CNN
+F 1 "10k" V 3700 2750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 3630 2750 50  0001 C CNN
+F 3 "" H 3700 2750 50  0000 C CNN
+	1    3700 2750
+	-1   0    0    1   
+$EndComp
+$Comp
+L +5V #PWR063
+U 1 1 59F607F0
+P 3700 2450
+F 0 "#PWR063" H 3700 2300 50  0001 C CNN
+F 1 "+5V" H 3700 2590 50  0000 C CNN
+F 2 "" H 3700 2450 50  0000 C CNN
+F 3 "" H 3700 2450 50  0000 C CNN
+	1    3700 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR064
+U 1 1 59F60863
+P 6850 3950
+F 0 "#PWR064" H 6850 3700 50  0001 C CNN
+F 1 "GND" H 6850 3800 50  0000 C CNN
+F 2 "" H 6850 3950 50  0000 C CNN
+F 3 "" H 6850 3950 50  0000 C CNN
+	1    6850 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR065
+U 1 1 59F6089A
+P 4150 3500
+F 0 "#PWR065" H 4150 3250 50  0001 C CNN
+F 1 "GND" H 4150 3350 50  0000 C CNN
+F 2 "" H 4150 3500 50  0000 C CNN
+F 3 "" H 4150 3500 50  0000 C CNN
+	1    4150 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR066
+U 1 1 59F609A7
+P 6850 3650
+F 0 "#PWR066" H 6850 3500 50  0001 C CNN
+F 1 "+5V" H 6850 3790 50  0000 C CNN
+F 2 "" H 6850 3650 50  0000 C CNN
+F 3 "" H 6850 3650 50  0000 C CNN
+	1    6850 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C29
+U 1 1 59F60AD6
+P 3700 3100
+F 0 "C29" H 3350 3100 50  0000 L CNN
+F 1 "0.1uF" H 3725 3000 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 3738 2950 50  0001 C CNN
+F 3 "" H 3700 3100 50  0000 C CNN
+	1    3700 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR067
+U 1 1 59F60B33
+P 3700 3250
+F 0 "#PWR067" H 3700 3000 50  0001 C CNN
+F 1 "GND" H 3700 3100 50  0000 C CNN
+F 2 "" H 3700 3250 50  0000 C CNN
+F 3 "" H 3700 3250 50  0000 C CNN
+	1    3700 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Crystal Y2
+U 1 1 59F6126E
+P 3950 4500
+F 0 "Y2" H 3950 4650 50  0000 C CNN
+F 1 "Crystal" V 3950 4250 50  0000 C CNN
+F 2 "Crystals:Crystal_Watch" H 3950 4500 50  0001 C CNN
+F 3 "" H 3950 4500 50  0000 C CNN
+	1    3950 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L C C27
+U 1 1 59F615B0
+P 3500 3750
+F 0 "C27" V 3450 3850 50  0000 L CNN
+F 1 "C" V 3350 3850 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 3538 3600 50  0001 C CNN
+F 3 "" H 3500 3750 50  0000 C CNN
+	1    3500 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L C C28
+U 1 1 59F6162A
+P 3500 4050
+F 0 "C28" V 3650 4150 50  0000 L CNN
+F 1 "?" V 3550 4150 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 3538 3900 50  0001 C CNN
+F 3 "" H 3500 4050 50  0000 C CNN
+	1    3500 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR068
+U 1 1 59F617D3
+P 3150 4050
+F 0 "#PWR068" H 3150 3800 50  0001 C CNN
+F 1 "GND" H 3150 3900 50  0000 C CNN
+F 2 "" H 3150 4050 50  0000 C CNN
+F 3 "" H 3150 4050 50  0000 C CNN
+	1    3150 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 2950 4700 2950
+Wire Wire Line
+	6300 3750 7500 3750
+Wire Wire Line
+	8150 2150 7850 2150
+Wire Wire Line
+	7850 2250 8150 2250
+Wire Wire Line
+	7850 2350 8150 2350
+Wire Wire Line
+	7750 2450 8150 2450
+Wire Wire Line
+	8150 2550 7750 2550
+Wire Wire Line
+	6300 3050 6700 3050
+Wire Wire Line
+	6300 2950 6700 2950
+Wire Wire Line
+	6300 3850 6900 3850
+Wire Wire Line
+	3700 2450 3700 2600
+Wire Wire Line
+	3700 2900 3700 2950
+Wire Wire Line
+	3700 2950 3900 2950
+Wire Wire Line
+	6850 3950 6850 3850
+Connection ~ 6850 3850
+Wire Wire Line
+	6850 3650 6850 3750
+Connection ~ 6850 3750
+Wire Wire Line
+	4700 3850 4150 3850
+Wire Wire Line
+	4150 3850 4150 4050
+Wire Wire Line
+	4150 4050 3650 4050
+Wire Wire Line
+	3650 3750 4700 3750
+Wire Wire Line
+	4250 4350 4250 3950
+Wire Wire Line
+	4250 3950 4700 3950
+Wire Wire Line
+	4700 4050 4350 4050
+Wire Wire Line
+	4350 4050 4350 4650
+Wire Wire Line
+	4700 3650 4250 3650
+Wire Wire Line
+	4250 3650 4250 3500
+Wire Wire Line
+	4250 3500 4150 3500
+Connection ~ 3950 3750
+Connection ~ 3950 4050
+Wire Wire Line
+	3650 4350 4250 4350
+Wire Wire Line
+	4350 4650 3650 4650
+$Comp
+L C C25
+U 1 1 59F619BC
+P 3500 4350
+F 0 "C25" V 3450 4200 50  0000 L CNN
+F 1 "C" V 3450 4400 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 3538 4200 50  0001 C CNN
+F 3 "" H 3500 4350 50  0000 C CNN
+	1    3500 4350
+	0    1    1    0   
+$EndComp
+Connection ~ 3950 4350
+$Comp
+L C C26
+U 1 1 59F61C0E
+P 3500 4650
+F 0 "C26" V 3450 4500 50  0000 L CNN
+F 1 "C" V 3550 4500 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 3538 4500 50  0001 C CNN
+F 3 "" H 3500 4650 50  0000 C CNN
+	1    3500 4650
+	0    1    1    0   
+$EndComp
+Connection ~ 3950 4650
+$Comp
+L GND #PWR069
+U 1 1 59F61C7B
+P 3200 4650
+F 0 "#PWR069" H 3200 4400 50  0001 C CNN
+F 1 "GND" H 3200 4500 50  0000 C CNN
+F 2 "" H 3200 4650 50  0000 C CNN
+F 3 "" H 3200 4650 50  0000 C CNN
+	1    3200 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 4350 3350 4650
+Wire Wire Line
+	3200 4650 3200 4500
+Wire Wire Line
+	3200 4500 3350 4500
+Connection ~ 3350 4500
+Wire Wire Line
+	3350 3750 3350 4050
+Wire Wire Line
+	3350 3900 3150 3900
+Wire Wire Line
+	3150 3900 3150 4050
+Connection ~ 3350 3900
+$Comp
+L C C30
+U 1 1 59F61FFA
+P 7300 3900
+F 0 "C30" H 7325 4000 50  0000 L CNN
+F 1 "100nF" H 7325 3800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 7338 3750 50  0001 C CNN
+F 3 "" H 7300 3900 50  0000 C CNN
+	1    7300 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR070
+U 1 1 59F620D7
+P 7300 4050
+F 0 "#PWR070" H 7300 3800 50  0001 C CNN
+F 1 "GND" H 7300 3900 50  0000 C CNN
+F 2 "" H 7300 4050 50  0000 C CNN
+F 3 "" H 7300 4050 50  0000 C CNN
+	1    7300 4050
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
