@@ -1,15 +1,27 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[p mainexit ]
-"19 system.h
-[v _ConfigureOscillator `(v ~T0 @X0 0 ef ]
-"13 user.h
-[v _InitApp `(v ~T0 @X0 0 ef ]
-"114 lcd.h
-[v _LCD_Initialize `(v ~T0 @X0 0 ef ]
-"141
-[v _LCDGoto `(v ~T0 @X0 0 ef2`uc`uc ]
-"132
-[v _WriteLCDString `(v ~T0 @X0 0 ef1`*uc ]
+"21610 /opt/microchip/xc8/v1.44/include/pic18f26k42.h
+[v _SPI1CON1 `Vuc ~T0 @X0 0 e@15637 ]
+"21712
+[v _SPI1CON2 `Vuc ~T0 @X0 0 e@15638 ]
+"21544
+[v _SPI1CON0 `Vuc ~T0 @X0 0 e@15636 ]
+"21504
+[v _SPI1TCNTL `Vuc ~T0 @X0 0 e@15634 ]
+"21427
+[v _SPI1TXB `Vuc ~T0 @X0 0 e@15633 ]
+"4224
+[s S183 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S183 . DMA1SCNTIF DMA1DCNTIF DMA1ORIF DMA1AIF SPI1RXIF SPI1TXIF SPI1IF I2C1RXIF ]
+"4234
+[s S184 :6 `uc 1 :1 `uc 1 ]
+[n S184 . . CMIF ]
+"4223
+[u S182 `S183 1 `S184 1 ]
+[n S182 . . . ]
+"4239
+[v _PIR2bits `VS182 ~T0 @X0 0 e@14754 ]
+"21357
+[v _SPI1RXB `Vuc ~T0 @X0 0 e@15632 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -17280,6 +17292,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 164: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 166: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
+[; ;stdbool.h: 12: typedef unsigned char bool;
+[; ;__size_t.h: 4: typedef unsigned size_t;
+[; ;stddef.h: 6: typedef int ptrdiff_t;
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
 [; ;stdint.h: 28: typedef signed short long int int24_t;
@@ -17308,56 +17323,197 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 205: typedef uint32_t uintmax_t;
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
-[; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;system.h: 19: void ConfigureOscillator(void);
-[; ;user.h: 13: void InitApp(void);
-[; ;lcd.h: 96: void WriteIOExpd (uint8_t reg, uint8_t data);
-[; ;lcd.h: 105: void WriteLCDCommand(uint8_t cmd);
-[; ;lcd.h: 114: void LCD_Initialize (void);
-[; ;lcd.h: 123: void WriteLCDByte(uint8_t data);
-[; ;lcd.h: 132: void WriteLCDString(char *data);
-[; ;lcd.h: 141: void LCDGoto(uint8_t row, uint8_t column);
-[; ;lcd.h: 150: void LCDClear(void);
-[v $root$_main `(v ~T0 @X0 0 e ]
-"34 main.c
-[v _main `(v ~T0 @X0 1 ef ]
-"35
+[; ;spi1.h: 116: void SPI1_Initialize(void);
+[; ;spi1.h: 151: uint8_t SPI1_Exchange8bit(uint8_t data);
+[; ;spi1.h: 191: uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
+"63 mcc_generated_files/spi1.c
+[v _SPI1_Initialize `(v ~T0 @X0 1 ef ]
+"64
 {
-[; ;main.c: 34: void main(void)
-[; ;main.c: 35: {
-[e :U _main ]
+[; ;spi1.c: 63: void SPI1_Initialize(void)
+[; ;spi1.c: 64: {
+[e :U _SPI1_Initialize ]
 [f ]
-[; ;main.c: 37: ConfigureOscillator();
-"37
-[e ( _ConfigureOscillator ..  ]
-[; ;main.c: 40: InitApp();
-"40
-[e ( _InitApp ..  ]
-[; ;main.c: 41: LCD_Initialize();
-"41
-[e ( _LCD_Initialize ..  ]
-[; ;main.c: 45: LCDGoto(0,0);
-"45
-[e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;main.c: 46: WriteLCDString((char*)"    Radismart     ");
-"46
-[e ( _WriteLCDString (1 -> :s 1C `*uc ]
-[; ;main.c: 47: while(1)
-"47
-[e :U 2146 ]
-[; ;main.c: 48: {
-"48
-{
-"50
-}
-[e :U 2145 ]
-"47
-[e $U 2146  ]
-[e :U 2147 ]
-[; ;main.c: 50: }
-[; ;main.c: 52: }
-"52
+[; ;spi1.c: 67: SPI1CON1 = 0x04;
+"67
+[e = _SPI1CON1 -> -> 4 `i `uc ]
+[; ;spi1.c: 69: SPI1CON2 = 0x03;
+"69
+[e = _SPI1CON2 -> -> 3 `i `uc ]
+[; ;spi1.c: 71: SPI1CON0 = 0x80;
+"71
+[e = _SPI1CON0 -> -> 128 `i `uc ]
+[; ;spi1.c: 72: }
+"72
 [e :UE 2144 ]
 }
-[a 1C 32 32 32 32 82 97 100 105 115 109 97 114 116 32 32 32 32 32 0 ]
-
+"74
+[v _SPI1_Exchange8bit `(uc ~T0 @X0 1 ef1`uc ]
+"75
+{
+[; ;spi1.c: 74: uint8_t SPI1_Exchange8bit(uint8_t data)
+[; ;spi1.c: 75: {
+[e :U _SPI1_Exchange8bit ]
+"74
+[v _data `uc ~T0 @X0 1 r1 ]
+"75
+[f ]
+[; ;spi1.c: 77: SPI1TCNTL = 1;
+"77
+[e = _SPI1TCNTL -> -> 1 `i `uc ]
+[; ;spi1.c: 78: SPI1TXB = data;
+"78
+[e = _SPI1TXB _data ]
+[; ;spi1.c: 80: while(PIR2bits.SPI1RXIF == 0x0)
+"80
+[e $U 2146  ]
+[e :U 2147 ]
+[; ;spi1.c: 81: {
+"81
+{
+"82
+}
+[e :U 2146 ]
+"80
+[e $ == -> . . _PIR2bits 0 4 `i -> 0 `i 2147  ]
+[e :U 2148 ]
+[; ;spi1.c: 82: }
+[; ;spi1.c: 84: return (SPI1RXB);
+"84
+[e ) _SPI1RXB ]
+[e $UE 2145  ]
+[; ;spi1.c: 85: }
+"85
+[e :UE 2145 ]
+}
+"87
+[v _SPI1_Exchange8bitBuffer `(uc ~T0 @X0 1 ef3`*uc`uc`*uc ]
+"88
+{
+[; ;spi1.c: 87: uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut)
+[; ;spi1.c: 88: {
+[e :U _SPI1_Exchange8bitBuffer ]
+"87
+[v _dataIn `*uc ~T0 @X0 1 r1 ]
+[v _bufLen `uc ~T0 @X0 1 r2 ]
+[v _dataOut `*uc ~T0 @X0 1 r3 ]
+"88
+[f ]
+"89
+[v _bytesWritten `uc ~T0 @X0 1 a ]
+[; ;spi1.c: 89: uint8_t bytesWritten = 0;
+[e = _bytesWritten -> -> 0 `i `uc ]
+"90
+[v _dummyRead `uc ~T0 @X0 1 a ]
+[; ;spi1.c: 90: uint8_t dummyRead;
+[; ;spi1.c: 92: if(bufLen != 0)
+"92
+[e $ ! != -> _bufLen `i -> 0 `i 2150  ]
+[; ;spi1.c: 93: {
+"93
+{
+[; ;spi1.c: 94: if(dataIn != (0))
+"94
+[e $ ! != _dataIn -> -> 0 `i `*uc 2151  ]
+[; ;spi1.c: 95: {
+"95
+{
+[; ;spi1.c: 96: while(bytesWritten < bufLen)
+"96
+[e $U 2152  ]
+[e :U 2153 ]
+[; ;spi1.c: 97: {
+"97
+{
+[; ;spi1.c: 98: if(dataOut == (0))
+"98
+[e $ ! == _dataOut -> -> 0 `i `*uc 2155  ]
+[; ;spi1.c: 99: {
+"99
+{
+[; ;spi1.c: 100: dummyRead = SPI1_Exchange8bit(dataIn[bytesWritten]);
+"100
+[e = _dummyRead ( _SPI1_Exchange8bit (1 *U + _dataIn * -> _bytesWritten `ux -> -> # *U _dataIn `ui `ux ]
+"101
+}
+[; ;spi1.c: 101: }
+[e $U 2156  ]
+"102
+[e :U 2155 ]
+[; ;spi1.c: 102: else
+[; ;spi1.c: 103: {
+"103
+{
+[; ;spi1.c: 104: dataOut[bytesWritten] = SPI1_Exchange8bit(dataIn[bytesWritten]);
+"104
+[e = *U + _dataOut * -> _bytesWritten `ux -> -> # *U _dataOut `ui `ux ( _SPI1_Exchange8bit (1 *U + _dataIn * -> _bytesWritten `ux -> -> # *U _dataIn `ui `ux ]
+"105
+}
+[e :U 2156 ]
+[; ;spi1.c: 105: }
+[; ;spi1.c: 107: bytesWritten++;
+"107
+[e ++ _bytesWritten -> -> 1 `i `uc ]
+"108
+}
+[e :U 2152 ]
+"96
+[e $ < -> _bytesWritten `i -> _bufLen `i 2153  ]
+[e :U 2154 ]
+"109
+}
+[; ;spi1.c: 108: }
+[; ;spi1.c: 109: }
+[e $U 2157  ]
+"110
+[e :U 2151 ]
+[; ;spi1.c: 110: else
+[; ;spi1.c: 111: {
+"111
+{
+[; ;spi1.c: 112: if(dataOut != (0))
+"112
+[e $ ! != _dataOut -> -> 0 `i `*uc 2158  ]
+[; ;spi1.c: 113: {
+"113
+{
+[; ;spi1.c: 114: while(bytesWritten < bufLen )
+"114
+[e $U 2159  ]
+[e :U 2160 ]
+[; ;spi1.c: 115: {
+"115
+{
+[; ;spi1.c: 116: dataOut[bytesWritten] = SPI1_Exchange8bit(0x0);
+"116
+[e = *U + _dataOut * -> _bytesWritten `ux -> -> # *U _dataOut `ui `ux ( _SPI1_Exchange8bit (1 -> -> 0 `i `uc ]
+[; ;spi1.c: 117: bytesWritten++;
+"117
+[e ++ _bytesWritten -> -> 1 `i `uc ]
+"118
+}
+[e :U 2159 ]
+"114
+[e $ < -> _bytesWritten `i -> _bufLen `i 2160  ]
+[e :U 2161 ]
+"119
+}
+[e :U 2158 ]
+"120
+}
+[e :U 2157 ]
+"121
+}
+[e :U 2150 ]
+[; ;spi1.c: 118: }
+[; ;spi1.c: 119: }
+[; ;spi1.c: 120: }
+[; ;spi1.c: 121: }
+[; ;spi1.c: 123: return bytesWritten;
+"123
+[e ) _bytesWritten ]
+[e $UE 2149  ]
+[; ;spi1.c: 124: }
+"124
+[e :UE 2149 ]
+}

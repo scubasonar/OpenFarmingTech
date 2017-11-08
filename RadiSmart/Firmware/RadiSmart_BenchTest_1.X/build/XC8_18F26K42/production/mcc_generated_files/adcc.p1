@@ -1,15 +1,170 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[p mainexit ]
-"19 system.h
-[v _ConfigureOscillator `(v ~T0 @X0 0 ef ]
-"13 user.h
-[v _InitApp `(v ~T0 @X0 0 ef ]
-"114 lcd.h
-[v _LCD_Initialize `(v ~T0 @X0 0 ef ]
-"141
-[v _LCDGoto `(v ~T0 @X0 0 ef2`uc`uc ]
-"132
-[v _WriteLCDString `(v ~T0 @X0 0 ef1`*uc ]
+"27316 /opt/microchip/xc8/v1.44/include/pic18f26k42.h
+[v _ADLTHL `Vuc ~T0 @X0 0 e@16094 ]
+"27444
+[v _ADLTHH `Vuc ~T0 @X0 0 e@16095 ]
+"27579
+[v _ADUTHL `Vuc ~T0 @X0 0 e@16096 ]
+"27707
+[v _ADUTHH `Vuc ~T0 @X0 0 e@16097 ]
+"28105
+[v _ADSTPTL `Vuc ~T0 @X0 0 e@16100 ]
+"28233
+[v _ADSTPTH `Vuc ~T0 @X0 0 e@16101 ]
+"28889
+[v _ADACCU `Vuc ~T0 @X0 0 e@16106 ]
+"29145
+[v _ADRPT `Vuc ~T0 @X0 0 e@16108 ]
+"29791
+[v _ADPCH `Vuc ~T0 @X0 0 e@16113 ]
+"29856
+[v _ADACQL `Vuc ~T0 @X0 0 e@16115 ]
+"29984
+[v _ADACQH `Vuc ~T0 @X0 0 e@16116 ]
+"30076
+[v _ADCAP `Vuc ~T0 @X0 0 e@16117 ]
+"30135
+[v _ADPREL `Vuc ~T0 @X0 0 e@16118 ]
+"30263
+[v _ADPREH `Vuc ~T0 @X0 0 e@16119 ]
+"30482
+[v _ADCON1 `Vuc ~T0 @X0 0 e@16121 ]
+"30557
+[v _ADCON2 `Vuc ~T0 @X0 0 e@16122 ]
+"30735
+[v _ADCON3 `Vuc ~T0 @X0 0 e@16123 ]
+"30865
+[v _ADSTAT `Vuc ~T0 @X0 0 e@16124 ]
+"30990
+[v _ADREF `Vuc ~T0 @X0 0 e@16125 ]
+"31072
+[v _ADACT `Vuc ~T0 @X0 0 e@16126 ]
+"31164
+[v _ADCLK `Vuc ~T0 @X0 0 e@16127 ]
+"30355
+[v _ADCON0 `Vuc ~T0 @X0 0 e@16120 ]
+"114 mcc_generated_files/adcc.c
+[c E18532 59 60 61 62 63 .. ]
+[n E18532 . channel_VSS channel_Temp channel_DAC1 channel_FVR_Buffer1 channel_FVR_Buffer2  ]
+"30361 /opt/microchip/xc8/v1.44/include/pic18f26k42.h
+[s S1359 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1359 . GO . FM CS . CONT ON ]
+"30370
+[s S1360 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1360 . ADGO . ADFM ADCS . ADCONT ADON ]
+"30379
+[s S1361 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1361 . DONE . FM0 ]
+"30384
+[s S1362 :1 `uc 1 ]
+[n S1362 . GO_NOT_DONE ]
+"30387
+[s S1363 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1363 . GO_nDONE . ADFM0 ]
+"30392
+[s S1364 :7 `uc 1 :1 `uc 1 ]
+[n S1364 . . ADCAL ]
+"30360
+[u S1358 `S1359 1 `S1360 1 `S1361 1 `S1362 1 `S1363 1 `S1364 1 ]
+[n S1358 . . . . . . . ]
+"30397
+[v _ADCON0bits `VS1358 ~T0 @X0 0 e@16120 ]
+"29671
+[v _ADRESH `Vuc ~T0 @X0 0 e@16112 ]
+"29543
+[v _ADRESL `Vuc ~T0 @X0 0 e@16111 ]
+"30741
+[s S1378 :3 `uc 1 :1 `uc 1 :3 `uc 1 ]
+[n S1378 . TMD SOI CALC ]
+"30746
+[s S1379 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1379 . ADTMD0 ADTMD1 ADTMD2 ADSOI ADCALC0 ADCALC1 ADCALC2 ]
+"30755
+[s S1380 :3 `uc 1 :1 `uc 1 :3 `uc 1 ]
+[n S1380 . ADTMD . ADCALC ]
+"30760
+[s S1381 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1381 . TMD0 TMD1 TMD2 . CALC0 CALC1 CALC2 ]
+"30740
+[u S1377 `S1378 1 `S1379 1 `S1380 1 `S1381 1 ]
+[n S1377 . . . . . ]
+"30770
+[v _ADCON3bits `VS1377 ~T0 @X0 0 e@16123 ]
+"29017
+[v _ADCNT `Vuc ~T0 @X0 0 e@16107 ]
+"30563
+[s S1370 :3 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
+[n S1370 . MODE ACLR CRS PSIS ]
+"30569
+[s S1371 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1371 . ADMD0 ADMD1 ADMD2 ADACLR ADCRS0 ADCRS1 ADCRS2 ADPSIS ]
+"30579
+[s S1372 :3 `uc 1 :1 `uc 1 :3 `uc 1 ]
+[n S1372 . ADMD . ADCRS ]
+"30584
+[s S1373 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1373 . MODE0 MODE1 MODE2 . CRS0 CRS1 CRS2 ]
+"30593
+[s S1374 :3 `uc 1 ]
+[n S1374 . MD ]
+"30596
+[s S1375 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1375 . MD0 MD1 MD2 ]
+"30601
+[s S1376 :3 `uc 1 ]
+[n S1376 . ADMODE ]
+"30562
+[u S1369 `S1370 1 `S1371 1 `S1372 1 `S1373 1 `S1374 1 `S1375 1 `S1376 1 ]
+[n S1369 . . . . . . . . ]
+"30605
+[v _ADCON2bits `VS1369 ~T0 @X0 0 e@16122 ]
+"28761
+[v _ADACCH `Vuc ~T0 @X0 0 e@16105 ]
+"28633
+[v _ADACCL `Vuc ~T0 @X0 0 e@16104 ]
+"30871
+[s S1383 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1383 . STAT . MATH LTHR UTHR OV ]
+"30879
+[s S1384 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1384 . ADSTAT0 ADSTAT1 ADSTAT2 . ADMATH ADLTHR ADUTHR ADAOV ]
+"30889
+[s S1385 :3 `uc 1 :4 `uc 1 :1 `uc 1 ]
+[n S1385 . ADSTAT . ADOV ]
+"30894
+[s S1386 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1386 . STAT0 STAT1 STAT2 ]
+"30870
+[u S1382 `S1383 1 `S1384 1 `S1385 1 `S1386 1 ]
+[n S1382 . . . . . ]
+"30900
+[v _ADSTATbits `VS1382 ~T0 @X0 0 e@16124 ]
+"28496
+[v _ADFLTRH `Vuc ~T0 @X0 0 e@16103 ]
+"28368
+[v _ADFLTRL `Vuc ~T0 @X0 0 e@16102 ]
+"29408
+[v _ADPREVH `Vuc ~T0 @X0 0 e@16110 ]
+"29280
+[v _ADPREVL `Vuc ~T0 @X0 0 e@16109 ]
+"27970
+[v _ADERRH `Vuc ~T0 @X0 0 e@16099 ]
+"27842
+[v _ADERRL `Vuc ~T0 @X0 0 e@16098 ]
+"30488
+[s S1366 :1 `uc 1 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1366 . DSEN . GPOL IPEN PPOL ]
+"30495
+[s S1367 :1 `uc 1 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1367 . ADDSEN . ADGPOL ADIPEN ADPPOL ]
+"30502
+[s S1368 :5 `uc 1 :1 `uc 1 ]
+[n S1368 . . VCFG11 ]
+"30487
+[u S1365 `S1366 1 `S1367 1 `S1368 1 ]
+[n S1365 . . . . ]
+"30507
+[v _ADCON1bits `VS1365 ~T0 @X0 0 e@16121 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -17309,55 +17464,590 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;system.h: 19: void ConfigureOscillator(void);
-[; ;user.h: 13: void InitApp(void);
-[; ;lcd.h: 96: void WriteIOExpd (uint8_t reg, uint8_t data);
-[; ;lcd.h: 105: void WriteLCDCommand(uint8_t cmd);
-[; ;lcd.h: 114: void LCD_Initialize (void);
-[; ;lcd.h: 123: void WriteLCDByte(uint8_t data);
-[; ;lcd.h: 132: void WriteLCDString(char *data);
-[; ;lcd.h: 141: void LCDGoto(uint8_t row, uint8_t column);
-[; ;lcd.h: 150: void LCDClear(void);
-[v $root$_main `(v ~T0 @X0 0 e ]
-"34 main.c
-[v _main `(v ~T0 @X0 1 ef ]
-"35
+[; ;adcc.h: 71: typedef uint16_t adc_result_t;
+[; ;adcc.h: 88: typedef enum
+[; ;adcc.h: 89: {
+[; ;adcc.h: 90: channel_VSS = 0x3B,
+[; ;adcc.h: 91: channel_Temp = 0x3C,
+[; ;adcc.h: 92: channel_DAC1 = 0x3D,
+[; ;adcc.h: 93: channel_FVR_Buffer1 = 0x3E,
+[; ;adcc.h: 94: channel_FVR_Buffer2 = 0x3F
+[; ;adcc.h: 95: } adcc_channel_t;
+[; ;adcc.h: 130: void ADCC_Initialize(void);
+[; ;adcc.h: 159: void ADCC_StartConversion(adcc_channel_t channel);
+[; ;adcc.h: 190: bool ADCC_IsConversionDone();
+[; ;adcc.h: 221: adc_result_t ADCC_GetConversionResult(void);
+[; ;adcc.h: 252: adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel);
+[; ;adcc.h: 277: void ADCC_StopConversion(void);
+[; ;adcc.h: 301: void ADCC_SetStopOnInterrupt(void);
+[; ;adcc.h: 323: void ADCC_DischargeSampleCapacitor(void);
+[; ;adcc.h: 347: void ADCC_LoadAcquisitionRegister(uint16_t);
+[; ;adcc.h: 370: void ADCC_SetPrechargeTime(uint16_t);
+[; ;adcc.h: 394: void ADCC_SetRepeatCount(uint8_t);
+[; ;adcc.h: 418: uint8_t ADCC_GetCurrentCountofConversions(void);
+[; ;adcc.h: 442: void ADCC_ClearAccumulator(void);
+[; ;adcc.h: 465: int24_t ADCC_GetAccumulatorValue(void);
+[; ;adcc.h: 489: bool ADCC_HasAccumulatorOverflowed(void);
+[; ;adcc.h: 513: uint16_t ADCC_GetFilterValue(void);
+[; ;adcc.h: 537: uint16_t ADCC_GetPreviousResult(void);
+[; ;adcc.h: 561: void ADCC_DefineSetPoint(uint16_t);
+[; ;adcc.h: 586: void ADCC_SetUpperThreshold(uint16_t);
+[; ;adcc.h: 611: void ADCC_SetLowerThreshold(uint16_t);
+[; ;adcc.h: 634: uint16_t ADCC_GetErrorCalculation(void);
+[; ;adcc.h: 656: void ADCC_EnableDoubleSampling(void);
+[; ;adcc.h: 678: void ADCC_EnableContinuousConversion(void);
+[; ;adcc.h: 700: void ADCC_DisableContinuousConversion(void);
+[; ;adcc.h: 722: bool ADCC_HasErrorCrossedUpperThreshold(void);
+[; ;adcc.h: 744: bool ADCC_HasErrorCrossedLowerThreshold(void);
+[; ;adcc.h: 766: uint8_t ADCC_GetConversionStageStatus(void);
+"61 mcc_generated_files/adcc.c
+[v _ADCC_Initialize `(v ~T0 @X0 1 ef ]
+"62
 {
-[; ;main.c: 34: void main(void)
-[; ;main.c: 35: {
-[e :U _main ]
+[; ;adcc.c: 61: void ADCC_Initialize(void)
+[; ;adcc.c: 62: {
+[e :U _ADCC_Initialize ]
 [f ]
-[; ;main.c: 37: ConfigureOscillator();
-"37
-[e ( _ConfigureOscillator ..  ]
-[; ;main.c: 40: InitApp();
-"40
-[e ( _InitApp ..  ]
-[; ;main.c: 41: LCD_Initialize();
-"41
-[e ( _LCD_Initialize ..  ]
-[; ;main.c: 45: LCDGoto(0,0);
-"45
-[e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;main.c: 46: WriteLCDString((char*)"    Radismart     ");
-"46
-[e ( _WriteLCDString (1 -> :s 1C `*uc ]
-[; ;main.c: 47: while(1)
-"47
-[e :U 2146 ]
-[; ;main.c: 48: {
-"48
-{
-"50
-}
-[e :U 2145 ]
-"47
-[e $U 2146  ]
-[e :U 2147 ]
-[; ;main.c: 50: }
-[; ;main.c: 52: }
-"52
+[; ;adcc.c: 65: ADLTHL = 0x00;
+"65
+[e = _ADLTHL -> -> 0 `i `uc ]
+[; ;adcc.c: 67: ADLTHH = 0x00;
+"67
+[e = _ADLTHH -> -> 0 `i `uc ]
+[; ;adcc.c: 69: ADUTHL = 0x00;
+"69
+[e = _ADUTHL -> -> 0 `i `uc ]
+[; ;adcc.c: 71: ADUTHH = 0x00;
+"71
+[e = _ADUTHH -> -> 0 `i `uc ]
+[; ;adcc.c: 73: ADSTPTL = 0x00;
+"73
+[e = _ADSTPTL -> -> 0 `i `uc ]
+[; ;adcc.c: 75: ADSTPTH = 0x00;
+"75
+[e = _ADSTPTH -> -> 0 `i `uc ]
+[; ;adcc.c: 77: ADACCU = 0x00;
+"77
+[e = _ADACCU -> -> 0 `i `uc ]
+[; ;adcc.c: 79: ADRPT = 0x00;
+"79
+[e = _ADRPT -> -> 0 `i `uc ]
+[; ;adcc.c: 81: ADPCH = 0x00;
+"81
+[e = _ADPCH -> -> 0 `i `uc ]
+[; ;adcc.c: 83: ADACQL = 0x00;
+"83
+[e = _ADACQL -> -> 0 `i `uc ]
+[; ;adcc.c: 85: ADACQH = 0x00;
+"85
+[e = _ADACQH -> -> 0 `i `uc ]
+[; ;adcc.c: 87: ADCAP = 0x00;
+"87
+[e = _ADCAP -> -> 0 `i `uc ]
+[; ;adcc.c: 89: ADPREL = 0x00;
+"89
+[e = _ADPREL -> -> 0 `i `uc ]
+[; ;adcc.c: 91: ADPREH = 0x00;
+"91
+[e = _ADPREH -> -> 0 `i `uc ]
+[; ;adcc.c: 93: ADCON1 = 0x00;
+"93
+[e = _ADCON1 -> -> 0 `i `uc ]
+[; ;adcc.c: 95: ADCON2 = 0x00;
+"95
+[e = _ADCON2 -> -> 0 `i `uc ]
+[; ;adcc.c: 97: ADCON3 = 0x00;
+"97
+[e = _ADCON3 -> -> 0 `i `uc ]
+[; ;adcc.c: 99: ADSTAT = 0x00;
+"99
+[e = _ADSTAT -> -> 0 `i `uc ]
+[; ;adcc.c: 101: ADREF = 0x00;
+"101
+[e = _ADREF -> -> 0 `i `uc ]
+[; ;adcc.c: 103: ADACT = 0x00;
+"103
+[e = _ADACT -> -> 0 `i `uc ]
+[; ;adcc.c: 105: ADCLK = 0x00;
+"105
+[e = _ADCLK -> -> 0 `i `uc ]
+[; ;adcc.c: 108: ADCON0 = 0x04;
+"108
+[e = _ADCON0 -> -> 4 `i `uc ]
+[; ;adcc.c: 111: }
+"111
 [e :UE 2144 ]
 }
-[a 1C 32 32 32 32 82 97 100 105 115 109 97 114 116 32 32 32 32 32 0 ]
-
+"113
+[v _ADCC_StartConversion `(v ~T0 @X0 1 ef1`E18532 ]
+"114
+{
+[; ;adcc.c: 113: void ADCC_StartConversion(adcc_channel_t channel)
+[; ;adcc.c: 114: {
+[e :U _ADCC_StartConversion ]
+"113
+[v _channel `E18532 ~T0 @X0 1 r1 ]
+"114
+[f ]
+[; ;adcc.c: 116: ADPCH = channel;
+"116
+[e = _ADPCH -> _channel `uc ]
+[; ;adcc.c: 119: ADCON0bits.ADON = 1;
+"119
+[e = . . _ADCON0bits 1 6 -> -> 1 `i `uc ]
+[; ;adcc.c: 122: ADCON0bits.ADGO = 1;
+"122
+[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
+[; ;adcc.c: 123: }
+"123
+[e :UE 2145 ]
+}
+"125
+[v _ADCC_IsConversionDone `(uc ~T0 @X0 1 ef ]
+"126
+{
+[; ;adcc.c: 125: bool ADCC_IsConversionDone()
+[; ;adcc.c: 126: {
+[e :U _ADCC_IsConversionDone ]
+[f ]
+[; ;adcc.c: 128: return ((unsigned char)(!ADCON0bits.ADGO));
+"128
+[e ) -> -> ! != -> . . _ADCON0bits 1 0 `i -> -> -> 0 `i `Vuc `i `i `uc ]
+[e $UE 2146  ]
+[; ;adcc.c: 129: }
+"129
+[e :UE 2146 ]
+}
+"131
+[v _ADCC_GetConversionResult `(ui ~T0 @X0 1 ef ]
+"132
+{
+[; ;adcc.c: 131: adc_result_t ADCC_GetConversionResult(void)
+[; ;adcc.c: 132: {
+[e :U _ADCC_GetConversionResult ]
+[f ]
+[; ;adcc.c: 134: return ((adc_result_t)((ADRESH << 8) + ADRESL));
+"134
+[e ) -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `ui ]
+[e $UE 2147  ]
+[; ;adcc.c: 135: }
+"135
+[e :UE 2147 ]
+}
+"137
+[v _ADCC_GetSingleConversion `(ui ~T0 @X0 1 ef1`E18532 ]
+"138
+{
+[; ;adcc.c: 137: adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel)
+[; ;adcc.c: 138: {
+[e :U _ADCC_GetSingleConversion ]
+"137
+[v _channel `E18532 ~T0 @X0 1 r1 ]
+"138
+[f ]
+[; ;adcc.c: 140: ADPCH = channel;
+"140
+[e = _ADPCH -> _channel `uc ]
+[; ;adcc.c: 143: ADCON0bits.ADON = 1;
+"143
+[e = . . _ADCON0bits 1 6 -> -> 1 `i `uc ]
+[; ;adcc.c: 146: ADCON0bits.ADCONT = 0;
+"146
+[e = . . _ADCON0bits 1 5 -> -> 0 `i `uc ]
+[; ;adcc.c: 149: ADCON0bits.ADGO = 1;
+"149
+[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
+[; ;adcc.c: 153: while (ADCON0bits.ADGO)
+"153
+[e $U 2149  ]
+[e :U 2150 ]
+[; ;adcc.c: 154: {
+"154
+{
+"155
+}
+[e :U 2149 ]
+"153
+[e $ != -> . . _ADCON0bits 1 0 `i -> -> -> 0 `i `Vuc `i 2150  ]
+[e :U 2151 ]
+[; ;adcc.c: 155: }
+[; ;adcc.c: 158: return ((adc_result_t)((ADRESH << 8) + ADRESL));
+"158
+[e ) -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `ui ]
+[e $UE 2148  ]
+[; ;adcc.c: 159: }
+"159
+[e :UE 2148 ]
+}
+"161
+[v _ADCC_StopConversion `(v ~T0 @X0 1 ef ]
+"162
+{
+[; ;adcc.c: 161: void ADCC_StopConversion(void)
+[; ;adcc.c: 162: {
+[e :U _ADCC_StopConversion ]
+[f ]
+[; ;adcc.c: 164: ADCON0bits.ADGO = 0;
+"164
+[e = . . _ADCON0bits 1 0 -> -> 0 `i `uc ]
+[; ;adcc.c: 165: }
+"165
+[e :UE 2152 ]
+}
+"167
+[v _ADCC_SetStopOnInterrupt `(v ~T0 @X0 1 ef ]
+"168
+{
+[; ;adcc.c: 167: void ADCC_SetStopOnInterrupt(void)
+[; ;adcc.c: 168: {
+[e :U _ADCC_SetStopOnInterrupt ]
+[f ]
+[; ;adcc.c: 170: ADCON3bits.ADSOI = 1;
+"170
+[e = . . _ADCON3bits 1 3 -> -> 1 `i `uc ]
+[; ;adcc.c: 171: }
+"171
+[e :UE 2153 ]
+}
+"173
+[v _ADCC_DischargeSampleCapacitor `(v ~T0 @X0 1 ef ]
+"174
+{
+[; ;adcc.c: 173: void ADCC_DischargeSampleCapacitor(void)
+[; ;adcc.c: 174: {
+[e :U _ADCC_DischargeSampleCapacitor ]
+[f ]
+[; ;adcc.c: 176: ADPCH = 0x3C;
+"176
+[e = _ADPCH -> -> 60 `i `uc ]
+[; ;adcc.c: 177: }
+"177
+[e :UE 2154 ]
+}
+"179
+[v _ADCC_LoadAcquisitionRegister `(v ~T0 @X0 1 ef1`ui ]
+"180
+{
+[; ;adcc.c: 179: void ADCC_LoadAcquisitionRegister(uint16_t acquisitionValue)
+[; ;adcc.c: 180: {
+[e :U _ADCC_LoadAcquisitionRegister ]
+"179
+[v _acquisitionValue `ui ~T0 @X0 1 r1 ]
+"180
+[f ]
+[; ;adcc.c: 182: ADACQH = acquisitionValue >> 8;
+"182
+[e = _ADACQH -> >> _acquisitionValue -> 8 `i `uc ]
+[; ;adcc.c: 183: ADACQL = acquisitionValue;
+"183
+[e = _ADACQL -> _acquisitionValue `uc ]
+[; ;adcc.c: 184: }
+"184
+[e :UE 2155 ]
+}
+"186
+[v _ADCC_SetPrechargeTime `(v ~T0 @X0 1 ef1`ui ]
+"187
+{
+[; ;adcc.c: 186: void ADCC_SetPrechargeTime(uint16_t prechargeTime)
+[; ;adcc.c: 187: {
+[e :U _ADCC_SetPrechargeTime ]
+"186
+[v _prechargeTime `ui ~T0 @X0 1 r1 ]
+"187
+[f ]
+[; ;adcc.c: 189: ADPREH = prechargeTime >> 8;
+"189
+[e = _ADPREH -> >> _prechargeTime -> 8 `i `uc ]
+[; ;adcc.c: 190: ADPREL = prechargeTime;
+"190
+[e = _ADPREL -> _prechargeTime `uc ]
+[; ;adcc.c: 191: }
+"191
+[e :UE 2156 ]
+}
+"193
+[v _ADCC_SetRepeatCount `(v ~T0 @X0 1 ef1`uc ]
+"194
+{
+[; ;adcc.c: 193: void ADCC_SetRepeatCount(uint8_t repeatCount)
+[; ;adcc.c: 194: {
+[e :U _ADCC_SetRepeatCount ]
+"193
+[v _repeatCount `uc ~T0 @X0 1 r1 ]
+"194
+[f ]
+[; ;adcc.c: 196: ADRPT = repeatCount;
+"196
+[e = _ADRPT _repeatCount ]
+[; ;adcc.c: 197: }
+"197
+[e :UE 2157 ]
+}
+"199
+[v _ADCC_GetCurrentCountofConversions `(uc ~T0 @X0 1 ef ]
+"200
+{
+[; ;adcc.c: 199: uint8_t ADCC_GetCurrentCountofConversions(void)
+[; ;adcc.c: 200: {
+[e :U _ADCC_GetCurrentCountofConversions ]
+[f ]
+[; ;adcc.c: 202: return ADCNT;
+"202
+[e ) _ADCNT ]
+[e $UE 2158  ]
+[; ;adcc.c: 203: }
+"203
+[e :UE 2158 ]
+}
+"205
+[v _ADCC_ClearAccumulator `(v ~T0 @X0 1 ef ]
+"206
+{
+[; ;adcc.c: 205: void ADCC_ClearAccumulator(void)
+[; ;adcc.c: 206: {
+[e :U _ADCC_ClearAccumulator ]
+[f ]
+[; ;adcc.c: 208: ADCON2bits.ADACLR = 1;
+"208
+[e = . . _ADCON2bits 1 3 -> -> 1 `i `uc ]
+[; ;adcc.c: 209: }
+"209
+[e :UE 2159 ]
+}
+"211
+[v _ADCC_GetAccumulatorValue `(m ~T0 @X0 1 ef ]
+"212
+{
+[; ;adcc.c: 211: int24_t ADCC_GetAccumulatorValue(void)
+[; ;adcc.c: 212: {
+[e :U _ADCC_GetAccumulatorValue ]
+[f ]
+[; ;adcc.c: 214: return (((int24_t)ADACCU << 16)+((int24_t)ADACCH << 8) + ADACCL);
+"214
+[e ) + + << -> _ADACCU `m -> 16 `i << -> _ADACCH `m -> 8 `i -> _ADACCL `m ]
+[e $UE 2160  ]
+[; ;adcc.c: 215: }
+"215
+[e :UE 2160 ]
+}
+"217
+[v _ADCC_HasAccumulatorOverflowed `(uc ~T0 @X0 1 ef ]
+"218
+{
+[; ;adcc.c: 217: bool ADCC_HasAccumulatorOverflowed(void)
+[; ;adcc.c: 218: {
+[e :U _ADCC_HasAccumulatorOverflowed ]
+[f ]
+[; ;adcc.c: 220: return ADSTATbits.ADAOV;
+"220
+[e ) . . _ADSTATbits 1 7 ]
+[e $UE 2161  ]
+[; ;adcc.c: 221: }
+"221
+[e :UE 2161 ]
+}
+"223
+[v _ADCC_GetFilterValue `(ui ~T0 @X0 1 ef ]
+"224
+{
+[; ;adcc.c: 223: uint16_t ADCC_GetFilterValue(void)
+[; ;adcc.c: 224: {
+[e :U _ADCC_GetFilterValue ]
+[f ]
+[; ;adcc.c: 226: return ((uint16_t)((ADFLTRH << 8) + ADFLTRL));
+"226
+[e ) -> + << -> _ADFLTRH `i -> 8 `i -> _ADFLTRL `i `ui ]
+[e $UE 2162  ]
+[; ;adcc.c: 227: }
+"227
+[e :UE 2162 ]
+}
+"229
+[v _ADCC_GetPreviousResult `(ui ~T0 @X0 1 ef ]
+"230
+{
+[; ;adcc.c: 229: uint16_t ADCC_GetPreviousResult(void)
+[; ;adcc.c: 230: {
+[e :U _ADCC_GetPreviousResult ]
+[f ]
+[; ;adcc.c: 232: return ((uint16_t)((ADPREVH << 8) + ADPREVL));
+"232
+[e ) -> + << -> _ADPREVH `i -> 8 `i -> _ADPREVL `i `ui ]
+[e $UE 2163  ]
+[; ;adcc.c: 233: }
+"233
+[e :UE 2163 ]
+}
+"235
+[v _ADCC_DefineSetPoint `(v ~T0 @X0 1 ef1`ui ]
+"236
+{
+[; ;adcc.c: 235: void ADCC_DefineSetPoint(uint16_t setPoint)
+[; ;adcc.c: 236: {
+[e :U _ADCC_DefineSetPoint ]
+"235
+[v _setPoint `ui ~T0 @X0 1 r1 ]
+"236
+[f ]
+[; ;adcc.c: 238: ADSTPTH = setPoint >> 8;
+"238
+[e = _ADSTPTH -> >> _setPoint -> 8 `i `uc ]
+[; ;adcc.c: 239: ADSTPTL = setPoint;
+"239
+[e = _ADSTPTL -> _setPoint `uc ]
+[; ;adcc.c: 240: }
+"240
+[e :UE 2164 ]
+}
+"242
+[v _ADCC_SetUpperThreshold `(v ~T0 @X0 1 ef1`ui ]
+"243
+{
+[; ;adcc.c: 242: void ADCC_SetUpperThreshold(uint16_t upperThreshold)
+[; ;adcc.c: 243: {
+[e :U _ADCC_SetUpperThreshold ]
+"242
+[v _upperThreshold `ui ~T0 @X0 1 r1 ]
+"243
+[f ]
+[; ;adcc.c: 245: ADUTHH = upperThreshold >> 8;
+"245
+[e = _ADUTHH -> >> _upperThreshold -> 8 `i `uc ]
+[; ;adcc.c: 246: ADUTHL = upperThreshold;
+"246
+[e = _ADUTHL -> _upperThreshold `uc ]
+[; ;adcc.c: 247: }
+"247
+[e :UE 2165 ]
+}
+"249
+[v _ADCC_SetLowerThreshold `(v ~T0 @X0 1 ef1`ui ]
+"250
+{
+[; ;adcc.c: 249: void ADCC_SetLowerThreshold(uint16_t lowerThreshold)
+[; ;adcc.c: 250: {
+[e :U _ADCC_SetLowerThreshold ]
+"249
+[v _lowerThreshold `ui ~T0 @X0 1 r1 ]
+"250
+[f ]
+[; ;adcc.c: 252: ADLTHH = lowerThreshold >> 8;
+"252
+[e = _ADLTHH -> >> _lowerThreshold -> 8 `i `uc ]
+[; ;adcc.c: 253: ADLTHL = lowerThreshold;
+"253
+[e = _ADLTHL -> _lowerThreshold `uc ]
+[; ;adcc.c: 254: }
+"254
+[e :UE 2166 ]
+}
+"256
+[v _ADCC_GetErrorCalculation `(ui ~T0 @X0 1 ef ]
+"257
+{
+[; ;adcc.c: 256: uint16_t ADCC_GetErrorCalculation(void)
+[; ;adcc.c: 257: {
+[e :U _ADCC_GetErrorCalculation ]
+[f ]
+[; ;adcc.c: 259: return ((uint16_t)((ADERRH << 8) + ADERRL));
+"259
+[e ) -> + << -> _ADERRH `i -> 8 `i -> _ADERRL `i `ui ]
+[e $UE 2167  ]
+[; ;adcc.c: 260: }
+"260
+[e :UE 2167 ]
+}
+"262
+[v _ADCC_EnableDoubleSampling `(v ~T0 @X0 1 ef ]
+"263
+{
+[; ;adcc.c: 262: void ADCC_EnableDoubleSampling(void)
+[; ;adcc.c: 263: {
+[e :U _ADCC_EnableDoubleSampling ]
+[f ]
+[; ;adcc.c: 265: ADCON1bits.ADDSEN = 1;
+"265
+[e = . . _ADCON1bits 1 0 -> -> 1 `i `uc ]
+[; ;adcc.c: 266: }
+"266
+[e :UE 2168 ]
+}
+"268
+[v _ADCC_EnableContinuousConversion `(v ~T0 @X0 1 ef ]
+"269
+{
+[; ;adcc.c: 268: void ADCC_EnableContinuousConversion(void)
+[; ;adcc.c: 269: {
+[e :U _ADCC_EnableContinuousConversion ]
+[f ]
+[; ;adcc.c: 271: ADCON0bits.ADCONT = 1;
+"271
+[e = . . _ADCON0bits 1 5 -> -> 1 `i `uc ]
+[; ;adcc.c: 272: }
+"272
+[e :UE 2169 ]
+}
+"274
+[v _ADCC_DisableContinuousConversion `(v ~T0 @X0 1 ef ]
+"275
+{
+[; ;adcc.c: 274: void ADCC_DisableContinuousConversion(void)
+[; ;adcc.c: 275: {
+[e :U _ADCC_DisableContinuousConversion ]
+[f ]
+[; ;adcc.c: 277: ADCON0bits.ADCONT = 0;
+"277
+[e = . . _ADCON0bits 1 5 -> -> 0 `i `uc ]
+[; ;adcc.c: 278: }
+"278
+[e :UE 2170 ]
+}
+"280
+[v _ADCC_HasErrorCrossedUpperThreshold `(uc ~T0 @X0 1 ef ]
+"281
+{
+[; ;adcc.c: 280: bool ADCC_HasErrorCrossedUpperThreshold(void)
+[; ;adcc.c: 281: {
+[e :U _ADCC_HasErrorCrossedUpperThreshold ]
+[f ]
+[; ;adcc.c: 283: return ADSTATbits.ADUTHR;
+"283
+[e ) . . _ADSTATbits 1 6 ]
+[e $UE 2171  ]
+[; ;adcc.c: 284: }
+"284
+[e :UE 2171 ]
+}
+"286
+[v _ADCC_HasErrorCrossedLowerThreshold `(uc ~T0 @X0 1 ef ]
+"287
+{
+[; ;adcc.c: 286: bool ADCC_HasErrorCrossedLowerThreshold(void)
+[; ;adcc.c: 287: {
+[e :U _ADCC_HasErrorCrossedLowerThreshold ]
+[f ]
+[; ;adcc.c: 289: return ADSTATbits.ADLTHR;
+"289
+[e ) . . _ADSTATbits 1 5 ]
+[e $UE 2172  ]
+[; ;adcc.c: 290: }
+"290
+[e :UE 2172 ]
+}
+"292
+[v _ADCC_GetConversionStageStatus `(uc ~T0 @X0 1 ef ]
+"293
+{
+[; ;adcc.c: 292: uint8_t ADCC_GetConversionStageStatus(void)
+[; ;adcc.c: 293: {
+[e :U _ADCC_GetConversionStageStatus ]
+[f ]
+[; ;adcc.c: 295: return ADSTATbits.ADSTAT;
+"295
+[e ) . . _ADSTATbits 2 0 ]
+[e $UE 2173  ]
+[; ;adcc.c: 296: }
+"296
+[e :UE 2173 ]
+}

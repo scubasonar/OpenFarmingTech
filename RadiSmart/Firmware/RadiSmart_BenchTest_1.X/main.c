@@ -19,6 +19,7 @@
 
 #include "system.h"        /* System funct/params, like osc/peripheral config */
 #include "user.h"          /* User funct/params, such as InitApp */
+#include "lcd.h"
 
 /******************************************************************************/
 /* User Global Variable Declaration                                           */
@@ -37,12 +38,15 @@ void main(void)
 
     /* Initialize I/O and Peripherals for application */
     InitApp();
-
+    LCD_Initialize();
+    
     /* TODO <INSERT USER APPLICATION CODE HERE> */
-
+    
+    LCDGoto(0,0);
+    WriteLCDString((char*)"    Radismart     ");
     while(1)
     {
-
+         
     }
 
 }

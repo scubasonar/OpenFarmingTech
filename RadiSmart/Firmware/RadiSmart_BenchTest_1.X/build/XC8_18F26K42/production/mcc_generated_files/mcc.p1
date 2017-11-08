@@ -1,15 +1,86 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[p mainexit ]
-"19 system.h
-[v _ConfigureOscillator `(v ~T0 @X0 0 ef ]
-"13 user.h
-[v _InitApp `(v ~T0 @X0 0 ef ]
-"114 lcd.h
-[v _LCD_Initialize `(v ~T0 @X0 0 ef ]
-"141
-[v _LCDGoto `(v ~T0 @X0 0 ef2`uc`uc ]
-"132
-[v _WriteLCDString `(v ~T0 @X0 0 ef1`*uc ]
+"120 mcc_generated_files/pin_manager.h
+[v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
+"82 mcc_generated_files/mcc.h
+[v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
+"130 mcc_generated_files/adcc.h
+[v _ADCC_Initialize `(v ~T0 @X0 0 ef ]
+"116 mcc_generated_files/spi1.h
+[v _SPI1_Initialize `(v ~T0 @X0 0 ef ]
+"5205 /opt/microchip/xc8/v1.44/include/pic18f26k42.h
+[v _OSCCON1 `Vuc ~T0 @X0 0 e@14809 ]
+"5345
+[v _OSCCON3 `Vuc ~T0 @X0 0 e@14811 ]
+"5497
+[v _OSCEN `Vuc ~T0 @X0 0 e@14813 ]
+"5652
+[v _OSCFRQ `Vuc ~T0 @X0 0 e@14815 ]
+"5548
+[v _OSCTUNE `Vuc ~T0 @X0 0 e@14814 ]
+"49 mcc_generated_files/mcc.c
+[p x FEXTOSC=ECM ]
+"50
+[p x RSTOSC=EXTOSC ]
+"53
+[p x CLKOUTEN=OFF ]
+"54
+[p x PR1WAY=ON ]
+"55
+[p x CSWEN=ON ]
+"56
+[p x FCMEN=ON ]
+"59
+[p x MCLRE=EXTMCLR ]
+"60
+[p x PWRTS=PWRT_OFF ]
+"61
+[p x MVECEN=OFF ]
+"62
+[p x IVT1WAY=ON ]
+"63
+[p x LPBOREN=OFF ]
+"64
+[p x BOREN=SBORDIS ]
+"67
+[p x BORV=VBOR_2P45 ]
+"68
+[p x ZCD=OFF ]
+"69
+[p x PPS1WAY=ON ]
+"70
+[p x STVREN=ON ]
+"71
+[p x DEBUG=OFF ]
+"72
+[p x XINST=OFF ]
+"75
+[p x WDTCPS=WDTCPS_31 ]
+"76
+[p x WDTE=ON ]
+"79
+[p x WDTCWS=WDTCWS_7 ]
+"80
+[p x WDTCCS=SC ]
+"83
+[p x BBSIZE=BBSIZE_512 ]
+"84
+[p x BBEN=OFF ]
+"85
+[p x SAFEN=OFF ]
+"86
+[p x WRTAPP=OFF ]
+"89
+[p x WRTB=OFF ]
+"90
+[p x WRTC=OFF ]
+"91
+[p x WRTD=OFF ]
+"92
+[p x WRTSAF=OFF ]
+"93
+[p x LVP=ON ]
+"96
+[p x CP=OFF ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -17280,6 +17351,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 164: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 166: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
+[; ;pin_manager.h: 120: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 132: void PIN_MANAGER_IOC(void);
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
 [; ;stdint.h: 28: typedef signed short long int int24_t;
@@ -17309,55 +17382,97 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;system.h: 19: void ConfigureOscillator(void);
-[; ;user.h: 13: void InitApp(void);
-[; ;lcd.h: 96: void WriteIOExpd (uint8_t reg, uint8_t data);
-[; ;lcd.h: 105: void WriteLCDCommand(uint8_t cmd);
-[; ;lcd.h: 114: void LCD_Initialize (void);
-[; ;lcd.h: 123: void WriteLCDByte(uint8_t data);
-[; ;lcd.h: 132: void WriteLCDString(char *data);
-[; ;lcd.h: 141: void LCDGoto(uint8_t row, uint8_t column);
-[; ;lcd.h: 150: void LCDClear(void);
-[v $root$_main `(v ~T0 @X0 0 e ]
-"34 main.c
-[v _main `(v ~T0 @X0 1 ef ]
-"35
+[; ;__size_t.h: 4: typedef unsigned size_t;
+[; ;stddef.h: 6: typedef int ptrdiff_t;
+[; ;spi1.h: 116: void SPI1_Initialize(void);
+[; ;spi1.h: 151: uint8_t SPI1_Exchange8bit(uint8_t data);
+[; ;spi1.h: 191: uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
+[; ;adcc.h: 71: typedef uint16_t adc_result_t;
+[; ;adcc.h: 88: typedef enum
+[; ;adcc.h: 89: {
+[; ;adcc.h: 90: channel_VSS = 0x3B,
+[; ;adcc.h: 91: channel_Temp = 0x3C,
+[; ;adcc.h: 92: channel_DAC1 = 0x3D,
+[; ;adcc.h: 93: channel_FVR_Buffer1 = 0x3E,
+[; ;adcc.h: 94: channel_FVR_Buffer2 = 0x3F
+[; ;adcc.h: 95: } adcc_channel_t;
+[; ;adcc.h: 130: void ADCC_Initialize(void);
+[; ;adcc.h: 159: void ADCC_StartConversion(adcc_channel_t channel);
+[; ;adcc.h: 190: bool ADCC_IsConversionDone();
+[; ;adcc.h: 221: adc_result_t ADCC_GetConversionResult(void);
+[; ;adcc.h: 252: adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel);
+[; ;adcc.h: 277: void ADCC_StopConversion(void);
+[; ;adcc.h: 301: void ADCC_SetStopOnInterrupt(void);
+[; ;adcc.h: 323: void ADCC_DischargeSampleCapacitor(void);
+[; ;adcc.h: 347: void ADCC_LoadAcquisitionRegister(uint16_t);
+[; ;adcc.h: 370: void ADCC_SetPrechargeTime(uint16_t);
+[; ;adcc.h: 394: void ADCC_SetRepeatCount(uint8_t);
+[; ;adcc.h: 418: uint8_t ADCC_GetCurrentCountofConversions(void);
+[; ;adcc.h: 442: void ADCC_ClearAccumulator(void);
+[; ;adcc.h: 465: int24_t ADCC_GetAccumulatorValue(void);
+[; ;adcc.h: 489: bool ADCC_HasAccumulatorOverflowed(void);
+[; ;adcc.h: 513: uint16_t ADCC_GetFilterValue(void);
+[; ;adcc.h: 537: uint16_t ADCC_GetPreviousResult(void);
+[; ;adcc.h: 561: void ADCC_DefineSetPoint(uint16_t);
+[; ;adcc.h: 586: void ADCC_SetUpperThreshold(uint16_t);
+[; ;adcc.h: 611: void ADCC_SetLowerThreshold(uint16_t);
+[; ;adcc.h: 634: uint16_t ADCC_GetErrorCalculation(void);
+[; ;adcc.h: 656: void ADCC_EnableDoubleSampling(void);
+[; ;adcc.h: 678: void ADCC_EnableContinuousConversion(void);
+[; ;adcc.h: 700: void ADCC_DisableContinuousConversion(void);
+[; ;adcc.h: 722: bool ADCC_HasErrorCrossedUpperThreshold(void);
+[; ;adcc.h: 744: bool ADCC_HasErrorCrossedLowerThreshold(void);
+[; ;adcc.h: 766: uint8_t ADCC_GetConversionStageStatus(void);
+[; ;mcc.h: 69: void SYSTEM_Initialize(void);
+[; ;mcc.h: 82: void OSCILLATOR_Initialize(void);
+"100 mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
+"101
 {
-[; ;main.c: 34: void main(void)
-[; ;main.c: 35: {
-[e :U _main ]
+[; ;mcc.c: 100: void SYSTEM_Initialize(void)
+[; ;mcc.c: 101: {
+[e :U _SYSTEM_Initialize ]
 [f ]
-[; ;main.c: 37: ConfigureOscillator();
-"37
-[e ( _ConfigureOscillator ..  ]
-[; ;main.c: 40: InitApp();
-"40
-[e ( _InitApp ..  ]
-[; ;main.c: 41: LCD_Initialize();
-"41
-[e ( _LCD_Initialize ..  ]
-[; ;main.c: 45: LCDGoto(0,0);
-"45
-[e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;main.c: 46: WriteLCDString((char*)"    Radismart     ");
-"46
-[e ( _WriteLCDString (1 -> :s 1C `*uc ]
-[; ;main.c: 47: while(1)
-"47
-[e :U 2146 ]
-[; ;main.c: 48: {
-"48
-{
-"50
-}
-[e :U 2145 ]
-"47
-[e $U 2146  ]
-[e :U 2147 ]
-[; ;main.c: 50: }
-[; ;main.c: 52: }
-"52
+[; ;mcc.c: 103: PIN_MANAGER_Initialize();
+"103
+[e ( _PIN_MANAGER_Initialize ..  ]
+[; ;mcc.c: 104: OSCILLATOR_Initialize();
+"104
+[e ( _OSCILLATOR_Initialize ..  ]
+[; ;mcc.c: 105: ADCC_Initialize();
+"105
+[e ( _ADCC_Initialize ..  ]
+[; ;mcc.c: 106: SPI1_Initialize();
+"106
+[e ( _SPI1_Initialize ..  ]
+[; ;mcc.c: 107: }
+"107
 [e :UE 2144 ]
 }
-[a 1C 32 32 32 32 82 97 100 105 115 109 97 114 116 32 32 32 32 32 0 ]
-
+"109
+[v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
+"110
+{
+[; ;mcc.c: 109: void OSCILLATOR_Initialize(void)
+[; ;mcc.c: 110: {
+[e :U _OSCILLATOR_Initialize ]
+[f ]
+[; ;mcc.c: 112: OSCCON1 = 0x70;
+"112
+[e = _OSCCON1 -> -> 112 `i `uc ]
+[; ;mcc.c: 114: OSCCON3 = 0x00;
+"114
+[e = _OSCCON3 -> -> 0 `i `uc ]
+[; ;mcc.c: 116: OSCEN = 0x00;
+"116
+[e = _OSCEN -> -> 0 `i `uc ]
+[; ;mcc.c: 118: OSCFRQ = 0x02;
+"118
+[e = _OSCFRQ -> -> 2 `i `uc ]
+[; ;mcc.c: 120: OSCTUNE = 0x00;
+"120
+[e = _OSCTUNE -> -> 0 `i `uc ]
+[; ;mcc.c: 121: }
+"121
+[e :UE 2145 ]
+}

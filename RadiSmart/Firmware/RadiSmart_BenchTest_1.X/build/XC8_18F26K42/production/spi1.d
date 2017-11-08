@@ -1,0 +1,1 @@
+ build/XC8_18F26K42/production/spi1.d  build/XC8_18F26K42/production/spi1.p1:  spi1.c spi1.h

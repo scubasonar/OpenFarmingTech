@@ -1,15 +1,80 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[p mainexit ]
-"19 system.h
-[v _ConfigureOscillator `(v ~T0 @X0 0 ef ]
-"13 user.h
-[v _InitApp `(v ~T0 @X0 0 ef ]
-"114 lcd.h
-[v _LCD_Initialize `(v ~T0 @X0 0 ef ]
-"141
-[v _LCDGoto `(v ~T0 @X0 0 ef2`uc`uc ]
-"132
-[v _WriteLCDString `(v ~T0 @X0 0 ef1`*uc ]
+"44072 /opt/microchip/xc8/v1.44/include/pic18f26k42.h
+[v _LATA `Vuc ~T0 @X0 0 e@16314 ]
+"44184
+[v _LATB `Vuc ~T0 @X0 0 e@16315 ]
+"44296
+[v _LATC `Vuc ~T0 @X0 0 e@16316 ]
+"44408
+[v _TRISA `Vuc ~T0 @X0 0 e@16322 ]
+"44470
+[v _TRISB `Vuc ~T0 @X0 0 e@16323 ]
+"44532
+[v _TRISC `Vuc ~T0 @X0 0 e@16324 ]
+"9026
+[v _ANSELC `Vuc ~T0 @X0 0 e@14944 ]
+"8190
+[v _ANSELB `Vuc ~T0 @X0 0 e@14928 ]
+"7570
+[v _ANSELA `Vuc ~T0 @X0 0 e@14912 ]
+"9862
+[v _WPUE `Vuc ~T0 @X0 0 e@14977 ]
+"8252
+[v _WPUB `Vuc ~T0 @X0 0 e@14929 ]
+"7632
+[v _WPUA `Vuc ~T0 @X0 0 e@14913 ]
+"9088
+[v _WPUC `Vuc ~T0 @X0 0 e@14945 ]
+"7694
+[v _ODCONA `Vuc ~T0 @X0 0 e@14914 ]
+"8314
+[v _ODCONB `Vuc ~T0 @X0 0 e@14930 ]
+"9150
+[v _ODCONC `Vuc ~T0 @X0 0 e@14946 ]
+"49003
+[v _GIE `Vb ~T0 @X0 0 e@130711 ]
+"10023
+[v _PPSLOCK `Vuc ~T0 @X0 0 e@15039 ]
+"10029
+[s S443 :1 `uc 1 ]
+[n S443 . PPSLOCKED ]
+"10028
+[u S442 `S443 1 ]
+[n S442 . . ]
+"10033
+[v _PPSLOCKbits `VS442 ~T0 @X0 0 e@15039 ]
+"10689
+[s S509 :5 `uc 1 ]
+[n S509 . SPI1SSPPS ]
+"10688
+[u S508 `S509 1 ]
+[n S508 . . ]
+"10693
+[v _SPI1SSPPSbits `VS508 ~T0 @X0 0 e@15072 ]
+"10649
+[s S505 :5 `uc 1 ]
+[n S505 . SPI1SCKPPS ]
+"10648
+[u S504 `S505 1 ]
+[n S504 . . ]
+"10653
+[v _SPI1SCKPPSbits `VS504 ~T0 @X0 0 e@15070 ]
+"10669
+[s S507 :5 `uc 1 ]
+[n S507 . SPI1SDIPPS ]
+"10668
+[u S506 `S507 1 ]
+[n S506 . . ]
+"10673
+[v _SPI1SDIPPSbits `VS506 ~T0 @X0 0 e@15071 ]
+"10629
+[s S503 :5 `uc 1 ]
+[n S503 . ADACTPPS ]
+"10628
+[u S502 `S503 1 ]
+[n S502 . . ]
+"10633
+[v _ADACTPPSbits `VS502 ~T0 @X0 0 e@15069 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -17280,84 +17345,118 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 164: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 166: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
-[; ;stdint.h: 13: typedef signed char int8_t;
-[; ;stdint.h: 20: typedef signed int int16_t;
-[; ;stdint.h: 28: typedef signed short long int int24_t;
-[; ;stdint.h: 36: typedef signed long int int32_t;
-[; ;stdint.h: 43: typedef unsigned char uint8_t;
-[; ;stdint.h: 49: typedef unsigned int uint16_t;
-[; ;stdint.h: 56: typedef unsigned short long int uint24_t;
-[; ;stdint.h: 63: typedef unsigned long int uint32_t;
-[; ;stdint.h: 71: typedef signed char int_least8_t;
-[; ;stdint.h: 78: typedef signed int int_least16_t;
-[; ;stdint.h: 90: typedef signed short long int int_least24_t;
-[; ;stdint.h: 98: typedef signed long int int_least32_t;
-[; ;stdint.h: 105: typedef unsigned char uint_least8_t;
-[; ;stdint.h: 111: typedef unsigned int uint_least16_t;
-[; ;stdint.h: 121: typedef unsigned short long int uint_least24_t;
-[; ;stdint.h: 128: typedef unsigned long int uint_least32_t;
-[; ;stdint.h: 137: typedef signed char int_fast8_t;
-[; ;stdint.h: 144: typedef signed int int_fast16_t;
-[; ;stdint.h: 156: typedef signed short long int int_fast24_t;
-[; ;stdint.h: 164: typedef signed long int int_fast32_t;
-[; ;stdint.h: 171: typedef unsigned char uint_fast8_t;
-[; ;stdint.h: 177: typedef unsigned int uint_fast16_t;
-[; ;stdint.h: 187: typedef unsigned short long int uint_fast24_t;
-[; ;stdint.h: 194: typedef unsigned long int uint_fast32_t;
-[; ;stdint.h: 200: typedef int32_t intmax_t;
-[; ;stdint.h: 205: typedef uint32_t uintmax_t;
-[; ;stdint.h: 210: typedef int16_t intptr_t;
-[; ;stdint.h: 215: typedef uint16_t uintptr_t;
+[; ;pin_manager.h: 120: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 132: void PIN_MANAGER_IOC(void);
 [; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;system.h: 19: void ConfigureOscillator(void);
-[; ;user.h: 13: void InitApp(void);
-[; ;lcd.h: 96: void WriteIOExpd (uint8_t reg, uint8_t data);
-[; ;lcd.h: 105: void WriteLCDCommand(uint8_t cmd);
-[; ;lcd.h: 114: void LCD_Initialize (void);
-[; ;lcd.h: 123: void WriteLCDByte(uint8_t data);
-[; ;lcd.h: 132: void WriteLCDString(char *data);
-[; ;lcd.h: 141: void LCDGoto(uint8_t row, uint8_t column);
-[; ;lcd.h: 150: void LCDClear(void);
-[v $root$_main `(v ~T0 @X0 0 e ]
-"34 main.c
-[v _main `(v ~T0 @X0 1 ef ]
-"35
+"52 mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize `(v ~T0 @X0 1 ef ]
+"53
 {
-[; ;main.c: 34: void main(void)
-[; ;main.c: 35: {
-[e :U _main ]
+[; ;pin_manager.c: 52: void PIN_MANAGER_Initialize(void)
+[; ;pin_manager.c: 53: {
+[e :U _PIN_MANAGER_Initialize ]
 [f ]
-[; ;main.c: 37: ConfigureOscillator();
-"37
-[e ( _ConfigureOscillator ..  ]
-[; ;main.c: 40: InitApp();
-"40
-[e ( _InitApp ..  ]
-[; ;main.c: 41: LCD_Initialize();
-"41
-[e ( _LCD_Initialize ..  ]
-[; ;main.c: 45: LCDGoto(0,0);
-"45
-[e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;main.c: 46: WriteLCDString((char*)"    Radismart     ");
-"46
-[e ( _WriteLCDString (1 -> :s 1C `*uc ]
-[; ;main.c: 47: while(1)
-"47
-[e :U 2146 ]
-[; ;main.c: 48: {
-"48
-{
-"50
-}
-[e :U 2145 ]
-"47
-[e $U 2146  ]
-[e :U 2147 ]
-[; ;main.c: 50: }
-[; ;main.c: 52: }
-"52
+[; ;pin_manager.c: 57: LATA = 0x00;
+"57
+[e = _LATA -> -> 0 `i `uc ]
+[; ;pin_manager.c: 58: LATB = 0x00;
+"58
+[e = _LATB -> -> 0 `i `uc ]
+[; ;pin_manager.c: 59: LATC = 0x00;
+"59
+[e = _LATC -> -> 0 `i `uc ]
+[; ;pin_manager.c: 64: TRISA = 0xFF;
+"64
+[e = _TRISA -> -> 255 `i `uc ]
+[; ;pin_manager.c: 65: TRISB = 0xFF;
+"65
+[e = _TRISB -> -> 255 `i `uc ]
+[; ;pin_manager.c: 66: TRISC = 0xFF;
+"66
+[e = _TRISC -> -> 255 `i `uc ]
+[; ;pin_manager.c: 71: ANSELC = 0xE7;
+"71
+[e = _ANSELC -> -> 231 `i `uc ]
+[; ;pin_manager.c: 72: ANSELB = 0xEF;
+"72
+[e = _ANSELB -> -> 239 `i `uc ]
+[; ;pin_manager.c: 73: ANSELA = 0xDF;
+"73
+[e = _ANSELA -> -> 223 `i `uc ]
+[; ;pin_manager.c: 78: WPUE = 0x00;
+"78
+[e = _WPUE -> -> 0 `i `uc ]
+[; ;pin_manager.c: 79: WPUB = 0x00;
+"79
+[e = _WPUB -> -> 0 `i `uc ]
+[; ;pin_manager.c: 80: WPUA = 0x00;
+"80
+[e = _WPUA -> -> 0 `i `uc ]
+[; ;pin_manager.c: 81: WPUC = 0x00;
+"81
+[e = _WPUC -> -> 0 `i `uc ]
+[; ;pin_manager.c: 86: ODCONA = 0x00;
+"86
+[e = _ODCONA -> -> 0 `i `uc ]
+[; ;pin_manager.c: 87: ODCONB = 0x00;
+"87
+[e = _ODCONB -> -> 0 `i `uc ]
+[; ;pin_manager.c: 88: ODCONC = 0x00;
+"88
+[e = _ODCONC -> -> 0 `i `uc ]
+"95
+[v _state `uc ~T0 @X0 1 a ]
+[; ;pin_manager.c: 95: bool state = (unsigned char)GIE;
+[e = _state -> -> _GIE `i `uc ]
+[; ;pin_manager.c: 96: GIE = 0;
+"96
+[e = _GIE -> -> 0 `i `b ]
+[; ;pin_manager.c: 97: PPSLOCK = 0x55;
+"97
+[e = _PPSLOCK -> -> 85 `i `uc ]
+[; ;pin_manager.c: 98: PPSLOCK = 0xAA;
+"98
+[e = _PPSLOCK -> -> 170 `i `uc ]
+[; ;pin_manager.c: 99: PPSLOCKbits.PPSLOCKED = 0x00;
+"99
+[e = . . _PPSLOCKbits 0 0 -> -> 0 `i `uc ]
+[; ;pin_manager.c: 101: SPI1SSPPSbits.SPI1SSPPS = 0x05;
+"101
+[e = . . _SPI1SSPPSbits 0 0 -> -> 5 `i `uc ]
+[; ;pin_manager.c: 102: SPI1SCKPPSbits.SPI1SCKPPS = 0x13;
+"102
+[e = . . _SPI1SCKPPSbits 0 0 -> -> 19 `i `uc ]
+[; ;pin_manager.c: 103: SPI1SDIPPSbits.SPI1SDIPPS = 0x14;
+"103
+[e = . . _SPI1SDIPPSbits 0 0 -> -> 20 `i `uc ]
+[; ;pin_manager.c: 104: ADACTPPSbits.ADACTPPS = 0x0C;
+"104
+[e = . . _ADACTPPSbits 0 0 -> -> 12 `i `uc ]
+[; ;pin_manager.c: 106: PPSLOCK = 0x55;
+"106
+[e = _PPSLOCK -> -> 85 `i `uc ]
+[; ;pin_manager.c: 107: PPSLOCK = 0xAA;
+"107
+[e = _PPSLOCK -> -> 170 `i `uc ]
+[; ;pin_manager.c: 108: PPSLOCKbits.PPSLOCKED = 0x01;
+"108
+[e = . . _PPSLOCKbits 0 0 -> -> 1 `i `uc ]
+[; ;pin_manager.c: 110: GIE = state;
+"110
+[e = _GIE -> _state `b ]
+[; ;pin_manager.c: 111: }
+"111
 [e :UE 2144 ]
 }
-[a 1C 32 32 32 32 82 97 100 105 115 109 97 114 116 32 32 32 32 32 0 ]
-
+"113
+[v _PIN_MANAGER_IOC `(v ~T0 @X0 1 ef ]
+"114
+{
+[; ;pin_manager.c: 113: void PIN_MANAGER_IOC(void)
+[; ;pin_manager.c: 114: {
+[e :U _PIN_MANAGER_IOC ]
+[f ]
+[; ;pin_manager.c: 116: }
+"116
+[e :UE 2145 ]
+}

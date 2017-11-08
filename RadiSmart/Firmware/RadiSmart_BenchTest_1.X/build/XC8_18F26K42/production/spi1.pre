@@ -1,5 +1,5 @@
 
-# 1 "main.c"
+# 1 "spi1.c"
 
 # 26 "/opt/microchip/xc8/v1.44/include/htc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -22783,6 +22783,15 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
+# 12 "/opt/microchip/xc8/v1.44/include/stdbool.h"
+typedef unsigned char bool;
+
+# 4 "/opt/microchip/xc8/v1.44/include/__size_t.h"
+typedef unsigned size_t;
+
+# 6 "/opt/microchip/xc8/v1.44/include/stddef.h"
+typedef int ptrdiff_t;
+
 # 13 "/opt/microchip/xc8/v1.44/include/stdint.h"
 typedef signed char int8_t;
 
@@ -22873,54 +22882,87 @@ typedef int16_t intptr_t;
 
 typedef uint16_t uintptr_t;
 
-# 12 "/opt/microchip/xc8/v1.44/include/stdbool.h"
-typedef unsigned char bool;
+# 117 "spi1.h"
+void SPI1_Initialize(void);
 
-# 19 "system.h"
-void ConfigureOscillator(void);
+# 152
+uint8_t SPI1_Exchange8bit(uint8_t data);
 
-# 13 "user.h"
-void InitApp(void);
+# 192
+uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
 
-# 96 "lcd.h"
-void WriteIOExpd (uint8_t reg, uint8_t data);
+# 215
+bool SPI1_IsBufferFull(void);
 
-# 105
-void WriteLCDCommand(uint8_t cmd);
+# 240
+bool SPI1_HasWriteCollisionOccured(void);
 
-# 114
-void LCD_Initialize (void);
+# 264
+void SPI1_ClearWriteCollisionStatus(void);
 
-# 123
-void WriteLCDByte(uint8_t data);
-
-# 132
-void WriteLCDString(char *data);
-
-# 141
-void LCDGoto(uint8_t row, uint8_t column);
-
-# 150
-void LCDClear(void);
-
-# 34 "main.c"
-void main(void)
-{
-
-ConfigureOscillator();
-
-
-InitApp();
-LCD_Initialize();
+# 64 "spi1.c"
+void SPI1_Initialize(void) {
 
 
 
-LCDGoto(0,0);
-WriteLCDString((char*)"    Radismart     ");
-while(1)
-{
+SSP1STAT = 0x40;
 
+
+SSP1CON1 = 0x20;
+
+
+SSP1ADD = 0x00;
 }
 
+uint8_t SPI1_Exchange8bit(uint8_t data) {
+
+SSP1CON1bits.WCOL = 0;
+
+SSP1BUF = data;
+
+while (SSP1STATbits.BF == 0x0) {
+}
+
+return (SSP1BUF);
+}
+
+uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut) {
+uint8_t bytesWritten = 0;
+
+if (bufLen != 0) {
+if (dataIn != (0)) {
+while (bytesWritten < bufLen) {
+if (dataOut == (0)) {
+SPI1_Exchange8bit(dataIn[bytesWritten]);
+} else {
+dataOut[bytesWritten] = SPI1_Exchange8bit(dataIn[bytesWritten]);
+}
+
+bytesWritten++;
+}
+} else {
+if (dataOut != (0)) {
+while (bytesWritten < bufLen) {
+dataOut[bytesWritten] = SPI1_Exchange8bit(0x0);
+
+bytesWritten++;
+}
+}
+}
+}
+
+return bytesWritten;
+}
+
+bool SPI1_IsBufferFull(void) {
+return (SSP1STATbits.BF);
+}
+
+bool SPI1_HasWriteCollisionOccured(void) {
+return (SSP1CON1bits.WCOL);
+}
+
+void SPI1_ClearWriteCollisionStatus(void) {
+SSP1CON1bits.WCOL = 0;
 }
 

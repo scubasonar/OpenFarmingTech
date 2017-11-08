@@ -28,7 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:MRV_ICs
 LIBS:RadiSmart_Driver-cache
 EELAYER 25 0
 EELAYER END
@@ -60,9 +59,9 @@ PWM3
 Text HLabel 4700 4150 0    60   Input ~ 0
 ADC1
 Text HLabel 4700 4250 0    60   Input ~ 0
-ADC2
+SCL1
 Text HLabel 6300 4250 2    60   Input ~ 0
-ADC3
+SDA1
 Text HLabel 6300 4150 2    60   Input ~ 0
 ADC4
 Text HLabel 6300 4050 2    60   Input ~ 0

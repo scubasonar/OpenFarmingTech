@@ -10,9 +10,9 @@ CND_CONF=XC8_18F26K42
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/RadiSmart_Firmware_1.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-OUTPUT_BASENAME=RadiSmart_Firmware_1.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-PACKAGE_TOP_DIR=radismartfirmware1.x/
+OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/RadiSmart_BenchTest_1.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+OUTPUT_BASENAME=RadiSmart_BenchTest_1.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+PACKAGE_TOP_DIR=radismartbenchtest1.x/
 
 # Functions
 function checkReturnCode
@@ -57,15 +57,15 @@ mkdir -p ${TMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory ${TMPDIR}/radismartfirmware1.x/bin
+makeDirectory ${TMPDIR}/radismartbenchtest1.x/bin
 copyFileToTmpDir "${OUTPUT_PATH}" "${TMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/package/radismartfirmware1.x.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/package/radismartbenchtest1.x.tar
 cd ${TMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/radismartfirmware1.x.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/radismartbenchtest1.x.tar *
 checkReturnCode
 
 # Cleanup
