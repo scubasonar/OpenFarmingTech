@@ -1,0 +1,203 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:MRV_ICs
+LIBS:RadiSmart_LED-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LED D2
+U 1 1 5A077FE8
+P 2400 2650
+F 0 "D2" H 2400 2750 50  0000 C CNN
+F 1 "LED" H 2400 2550 50  0000 C CNN
+F 2 "" H 2400 2650 50  0000 C CNN
+F 3 "" H 2400 2650 50  0000 C CNN
+	1    2400 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D1
+U 1 1 5A078069
+P 2400 2250
+F 0 "D1" H 2400 2350 50  0000 C CNN
+F 1 "LED" H 2400 2150 50  0000 C CNN
+F 2 "" H 2400 2250 50  0000 C CNN
+F 3 "" H 2400 2250 50  0000 C CNN
+	1    2400 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D5
+U 1 1 5A0780EE
+P 4000 2200
+F 0 "D5" H 4000 2300 50  0000 C CNN
+F 1 "LED" H 4000 2100 50  0000 C CNN
+F 2 "" H 4000 2200 50  0000 C CNN
+F 3 "" H 4000 2200 50  0000 C CNN
+	1    4000 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D6
+U 1 1 5A07812B
+P 4000 2600
+F 0 "D6" H 4000 2700 50  0000 C CNN
+F 1 "LED" H 4000 2500 50  0000 C CNN
+F 2 "" H 4000 2600 50  0000 C CNN
+F 3 "" H 4000 2600 50  0000 C CNN
+	1    4000 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D7
+U 1 1 5A078169
+P 4000 3000
+F 0 "D7" H 4000 3100 50  0000 C CNN
+F 1 "LED" H 4000 2900 50  0000 C CNN
+F 2 "" H 4000 3000 50  0000 C CNN
+F 3 "" H 4000 3000 50  0000 C CNN
+	1    4000 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D8
+U 1 1 5A078194
+P 4000 3400
+F 0 "D8" H 4000 3500 50  0000 C CNN
+F 1 "LED" H 4000 3300 50  0000 C CNN
+F 2 "" H 4000 3400 50  0000 C CNN
+F 3 "" H 4000 3400 50  0000 C CNN
+	1    4000 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D9
+U 1 1 5A0781D4
+P 4000 3800
+F 0 "D9" H 4000 3900 50  0000 C CNN
+F 1 "LED" H 4000 3700 50  0000 C CNN
+F 2 "" H 4000 3800 50  0000 C CNN
+F 3 "" H 4000 3800 50  0000 C CNN
+	1    4000 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D4
+U 1 1 5A078207
+P 4000 1800
+F 0 "D4" H 4000 1900 50  0000 C CNN
+F 1 "LED" H 4000 1700 50  0000 C CNN
+F 2 "" H 4000 1800 50  0000 C CNN
+F 3 "" H 4000 1800 50  0000 C CNN
+	1    4000 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D3
+U 1 1 5A07823B
+P 4000 1400
+F 0 "D3" H 4000 1500 50  0000 C CNN
+F 1 "LED" H 4000 1300 50  0000 C CNN
+F 2 "" H 4000 1400 50  0000 C CNN
+F 3 "" H 4000 1400 50  0000 C CNN
+	1    4000 1400
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D10
+U 1 1 5A078272
+P 4000 4200
+F 0 "D10" H 4000 4300 50  0000 C CNN
+F 1 "LED" H 4000 4100 50  0000 C CNN
+F 2 "" H 4000 4200 50  0000 C CNN
+F 3 "" H 4000 4200 50  0000 C CNN
+	1    4000 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_01X02 P1
+U 1 1 5A07831A
+P 1700 2450
+F 0 "P1" H 1700 2600 50  0000 C CNN
+F 1 "CONN_01X02" V 1800 2450 50  0000 C CNN
+F 2 "" H 1700 2450 50  0000 C CNN
+F 3 "" H 1700 2450 50  0000 C CNN
+	1    1700 2450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1900 2500 2000 2500
+Wire Wire Line
+	2000 2500 2000 2850
+Wire Wire Line
+	2000 2850 2400 2850
+$Comp
+L CONN_01X02 P2
+U 1 1 5A078418
+P 3550 2400
+F 0 "P2" H 3550 2550 50  0000 C CNN
+F 1 "CONN_01X02" V 3650 2400 50  0000 C CNN
+F 2 "" H 3550 2400 50  0000 C CNN
+F 3 "" H 3550 2400 50  0000 C CNN
+	1    3550 2400
+	-1   0    0    1   
+$EndComp
+Text Notes 1450 1900 0    60   ~ 0
+High power white LED (9V drop)
+Text Notes 3350 1050 0    60   ~ 0
+High efficiency Red(2.5V drop)
+Wire Wire Line
+	1900 2400 1950 2400
+Wire Wire Line
+	1950 2400 1950 2050
+Wire Wire Line
+	1950 2050 2400 2050
+Wire Wire Line
+	3750 2450 3750 4400
+Wire Wire Line
+	3750 4400 4000 4400
+Wire Wire Line
+	3750 2350 3750 1200
+Wire Wire Line
+	3750 1200 4000 1200
+$EndSCHEMATC
