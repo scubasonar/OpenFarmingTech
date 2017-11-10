@@ -1,4 +1,4 @@
-update=Fri 27 Oct 2017 09:32:39 AM PDT
+update=Thu 09 Nov 2017 08:36:54 AM PST
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,3 +59,4 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=/home/scubasonar/KiCAD_Libs/Symbols/MRV_ICs
+LibName31=/home/mvalancy/Documents/KiCAD_Libs/Symbols/MRV_ICs
